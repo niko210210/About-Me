@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+    font-family: "Poppins", sans-serif;    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('Nature-Iphone-Background-HD.jpg') center/cover no-repeat; /* Ganti 'background-image.jpg' dengan path gambar yang sesuai */
+    backdrop-filter: blur(3px);
+}
+
+.login-container {
+    max-width: 220px;
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #119f16;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMPN 163 JKT | SatDev</title>
+</head>
+<body>
+    <div class="login-container">
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="login()">Let's Go!</button>
+        </form>
+    </div>
+    </body>
+</html>
+<script>
+    function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Validasi username dan password
+    if (username === "SatDev" && password === "onlysatdev") {
+        alert("Kamu berhasil bro!");
+    
+        // Redirect ke halaman selanjutnya
+        window.location.href = "/web/web.html";
+    
+    } else {
+        alert("Yah gagal :(");
+    }
+}
+
+</script>
